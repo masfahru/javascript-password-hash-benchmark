@@ -27,6 +27,7 @@ jobs:
         run: |
             ncu -u
             bun i
+            npm rebuild @node-rs/argon2 argon2 bcrypt
       - name: Node.js Benchmark
         run: node node.index.js > ./results/node.txt
       - name: Bun.sh Benchmark
