@@ -1,0 +1,22 @@
+@node-rs/argon2: $argon2id$v=19$m=19456,t=2,p=1$RAy8GEvClUIJt7mdBfte+A$GNrnTJlmPP3VslBk/Z+P6Q6Ybpft4tbZ44Ruqktyeyo
+Argon2: $argon2id$v=19$m=19456,t=2,p=1$M40rnqDmH7t+HYWKqouXPg$Y/rIC7+Yuak8NjT9UnB/Ceqdl2OO+u+LU+Px9Exjujg
+Bcrypt: $2b$10$QIWV0T50j54YnSt6HNSvhueFjMiRmXz.ueqZPQv8VU484tkMau7B2
+Bcryptjs: $2a$10$0tHC79jq9w2wV.nZ3FojHOogdGWFu/8dG4.BMGF46tmYp41WY0hsi
+
+cpu: Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz
+runtime: node v20.9.0 (x64-linux)
+
+benchmark            time (avg)             (min … max)       p75       p99      p995
+------------------------------------------------------- -----------------------------
+• Node.js
+------------------------------------------------------- -----------------------------
+@node-rs/argon2   68.08 ms/iter   (63.41 ms … 79.52 ms)  70.83 ms  79.52 ms  79.52 ms
+Argon2            80.44 ms/iter   (76.75 ms … 88.15 ms)   81.8 ms  88.15 ms  88.15 ms
+Bcrypt           172.32 ms/iter (166.33 ms … 194.84 ms) 175.13 ms 194.84 ms 194.84 ms
+bcryptjs         236.44 ms/iter (232.51 ms … 246.18 ms) 237.28 ms 246.18 ms 246.18 ms
+
+summary for Node.js
+  @node-rs/argon2
+   1.18x faster than Argon2
+   2.53x faster than Bcrypt
+   3.47x faster than bcryptjs
