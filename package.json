@@ -1,0 +1,17 @@
+{
+  "name": "javascript-password-hash-benchmark",
+  "version": "0.0.0",
+  "author": "Imam Fahrur Rofi",
+  "dependencies": {
+    "@node-rs/argon2": "^1.5.2",
+    "argon2": "^0.31.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "bun": "^1.0.7",
+    "mitata": "^0.1.6",
+    "mocha": "^10.2.0"
+  },
+  "description": "Benchmarking password hash for nodejs & bun",
+  "license": "MIT",
+  "type": "module"
+}

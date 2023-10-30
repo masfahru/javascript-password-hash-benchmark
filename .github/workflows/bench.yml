@@ -1,0 +1,49 @@
+name: Benchmark
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  bench:
+    name: Benchmark
+    strategy:
+      fail-fast: true
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.0
+        with:
+          node-version: 20
+      - name: Install required global packages
+        run: npm i -g bun npm-check-updates
+      - name: Update & install packages
+        run: |
+            ncu -u
+            bun i
+      - name: Node.js Benchmark
+        run: node node.index.js > ./results/node.txt
+      - name: Bun.sh Benchmark
+        run: bun --bun bun.index.js > ./results/bun.txt
+      - name: Commit changes
+        run: |
+          git config --local user.email "imam@fahru.my.id"
+          git config --local user.name "masfahru"
+          git add -A
+          
+          git commit -m "🚀 Update Benchmark"
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: ${{ github.ref }}
+          directory: "."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+  
+          
