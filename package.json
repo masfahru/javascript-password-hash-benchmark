@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "author": "Imam Fahrur Rofi",
   "dependencies": {
-    "@node-rs/argon2": "^1.5.2",
-    "argon2": "^0.31.1",
+    "@node-rs/argon2": "^1.6.1",
+    "argon2": "^0.31.2",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
-    "bun": "^1.0.7",
+    "bun": "^1.0.21",
     "mitata": "^0.1.6",
     "mocha": "^10.2.0"
   },

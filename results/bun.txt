@@ -1,19 +1,19 @@
-Bun Argon2id: $argon2id$v=19$m=19456,t=2,p=1$mUQc6Zf2CTpELC+uV7I/PyVGQ+3PPFDI3dDnCD7tIo4$Qz3MBMzCKPs7MHbx9+hTSTPJavvufIgambVpZyDuwD4
-Bun Bcrypt: $2b$10$SojgXUWmeCOKDgfsvpcpreXUCtEi7w2k5oWgBUN0dKHdAfUBx50TG
-Bcryptjs: $2a$10$JKtK2A1ZnHReW7rGmjF31egFsRyAWgHDaYZucmFDseitvznG0QQWa
+Bun Argon2id: $argon2id$v=19$m=19456,t=2,p=1$wAtXcqHMhRncdnVT+Yu59pnBJLXdE7r0kSCGx9eNuHk$D68Jd50OuX66C5MoE1y+zw4BkGnz7nJVB0kJ6Dv4kP4
+Bun Bcrypt: $2b$10$wB763opg50JZUvjyHDUjpebH.yFO7kich2LAO6CKj7F.hC0iAZqxS
+Bcryptjs: $2a$10$tB3Kc/kNGzoDrjUAn4sLnu1C0LR8aEOAZ3.3hgHNxM88yvSwtIyG6
 
-cpu: Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz
-runtime: bun 1.0.7 (x64-linux)
+cpu: AMD EPYC 7763 64-Core Processor
+runtime: bun 1.0.21 (x64-linux)
 
 benchmark         time (avg)             (min … max)       p75       p99      p995
 ---------------------------------------------------- -----------------------------
 • Bun.sh
 ---------------------------------------------------- -----------------------------
-Bun Argon2id    70.7 ms/iter   (68.21 ms … 72.37 ms)  71.52 ms  72.37 ms  72.37 ms
-Bun Bcrypt    142.45 ms/iter (142.27 ms … 142.86 ms) 142.46 ms 142.86 ms 142.86 ms
-Bcryptjs      176.47 ms/iter (175.48 ms … 178.24 ms) 177.28 ms 178.24 ms 178.24 ms
+Bun Argon2id   52.84 ms/iter   (51.25 ms … 53.47 ms)  53.23 ms  53.47 ms  53.47 ms
+Bun Bcrypt    127.84 ms/iter  (126.77 ms … 128.4 ms) 128.22 ms  128.4 ms  128.4 ms
+Bcryptjs      151.27 ms/iter     (147.9 ms … 153 ms) 151.71 ms    153 ms    153 ms
 
 summary for Bun.sh
   Bun Argon2id
-   2.01x faster than Bun Bcrypt
-   2.5x faster than Bcryptjs
+   2.42x faster than Bun Bcrypt
+   2.86x faster than Bcryptjs

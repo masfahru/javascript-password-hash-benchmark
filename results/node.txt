@@ -1,22 +1,22 @@
-@node-rs/argon2: $argon2id$v=19$m=19456,t=2,p=1$AjoHP7242nWzlZ7w3PF0ug$qvJlRGxZTSJvd33g8PiVaIT6BQO55XZKXASFOqaw9DI
-Argon2: $argon2id$v=19$m=19456,t=2,p=1$js5/P9dwVVjsUAOxZmBUBg$9sGFdnzuL+BLQf1kODS32wC4MgCAG8Zc8LC3zmZ5eUk
-Bcrypt: $2b$10$e5CgD23u8HL1oVj5ipAUIum31eoyvkQJYqeYr3taXIMTGZq3GkBDC
-Bcryptjs: $2a$10$qcTssNqXPEKK5grXn7fzZu2ig.MeCsXNvfsVEoO6m/aqtdiK/qY9S
+@node-rs/argon2: $argon2id$v=19$m=19456,t=2,p=1$xxsEQB8f9MaCRFZQExhPRg$p2PqKxsy7Wc+9bRhWt6UefOuIF0l3L78VJrX0++KRnk
+Argon2: $argon2id$v=19$m=19456,t=2,p=1$FqGgyMBq3UrJ7kcvBds6SQ$LWwiFIjTV3++WDXG4nOUZ+C9+IhgYBSQzP3JDQwxQKQ
+Bcrypt: $2b$10$7FqQaB4VFHGss/jRCem6rOPe0OM3ZM0.8hEnVj87qgHIK0vYsYZkm
+Bcryptjs: $2a$10$76Gx6ukC4cYvP4SuNQVgUOFM61TkeAGPxoZmk/fWELJYRRdNbo3pm
 
-cpu: Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz
-runtime: node v20.9.0 (x64-linux)
+cpu: AMD EPYC 7763 64-Core Processor
+runtime: node v20.10.0 (x64-linux)
 
 benchmark            time (avg)             (min … max)       p75       p99      p995
 ------------------------------------------------------- -----------------------------
 • Node.js
 ------------------------------------------------------- -----------------------------
-@node-rs/argon2    45.3 ms/iter   (43.79 ms … 46.63 ms)  46.16 ms  46.63 ms  46.63 ms
-Argon2            57.18 ms/iter   (56.32 ms … 58.45 ms)  57.59 ms  58.45 ms  58.45 ms
-Bcrypt           132.43 ms/iter  (132.2 ms … 134.74 ms) 132.33 ms 134.74 ms 134.74 ms
-bcryptjs         222.38 ms/iter (221.81 ms … 224.18 ms) 222.35 ms 224.18 ms 224.18 ms
+@node-rs/argon2   32.62 ms/iter   (32.06 ms … 34.03 ms)  32.61 ms  34.03 ms  34.03 ms
+Argon2            37.98 ms/iter   (37.64 ms … 38.56 ms)  38.13 ms  38.56 ms  38.56 ms
+Bcrypt           117.28 ms/iter  (115.71 ms … 117.7 ms) 117.55 ms  117.7 ms  117.7 ms
+bcryptjs         168.33 ms/iter (161.78 ms … 177.27 ms) 172.71 ms 177.27 ms 177.27 ms
 
 summary for Node.js
   @node-rs/argon2
-   1.26x faster than Argon2
-   2.92x faster than Bcrypt
-   4.91x faster than bcryptjs
+   1.16x faster than Argon2
+   3.6x faster than Bcrypt
+   5.16x faster than bcryptjs
